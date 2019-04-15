@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.sass']
+  template: `<nav-bar></nav-bar>`
 })
 export class AppComponent {
   title = 'billy-angular';
