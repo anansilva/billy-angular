@@ -5,11 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { NavBarComponent } from './nav/nav-bar.component';
+import { ExpensesListComponent } from './expenses/expenses-list.component';
+import { ExpenseThumbnailComponent } from './expenses/expense-thumbnail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent
+    NavBarComponent,
+    ExpensesListComponent,
+    ExpenseThumbnailComponent,
   ],
   imports: [
     BrowserModule,
