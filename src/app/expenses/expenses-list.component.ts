@@ -7,14 +7,40 @@ import { Component } from '@angular/core';
       <h1>Latest Expenses</h1>
       <hr/>
     </div>
-    <expense-thumbnail [expense]="expense1"></expense-thumbnail>
+    <expense-thumbnail *ngFor="let expense of expenses" [expense]="expense"></expense-thumbnail>
   `
 })
 export class ExpensesListComponent {
-  expense1 = {
-    id: 1,
-    amount: 10,
-    description: 'my first expense',
-    category: 'pingo doce'
-  }
+  expenses = [
+    {
+      id: 1,
+      amount: 10,
+      description: 'pingo doce',
+      category: 'food&groceries'
+    },
+    {
+      id: 2,
+      amount: 11,
+      description: 'bilhetes concerto',
+      category: 'entertainment'
+    },
+    {
+      id: 3,
+      amount: 500,
+      description: 'renda maio',
+      category: 'rent'
+    },
+    {
+      id: 4,
+      amount: 55,
+      description: 'eletricidade',
+      category: 'utilities'
+    },
+    {
+      id: 5,
+      amount: 10,
+      description: 'livros',
+      category: 'other'
+    },
+  ]
 }
