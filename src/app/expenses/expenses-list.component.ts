@@ -3,12 +3,21 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'expenses-list',
   template: `
-    <div>
-      <h1>Latest Expenses</h1>
-      <hr/>
+  <div class="container list-container">
+    <div class="row">
+      <expense-thumbnail *ngFor="let expense of expenses" [expense]="expense"></expense-thumbnail>
+      </div>
     </div>
-    <expense-thumbnail *ngFor="let expense of expenses" [expense]="expense"></expense-thumbnail>
-  `
+  `,
+  styles: [`
+    .list-container {
+      padding: 10px;
+      margin: 30px auto;
+      width: 700px;
+      align-content: center;
+      background-color: transparent;
+    }
+  `]
 })
 export class ExpensesListComponent {
   expenses = [
