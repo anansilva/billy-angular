@@ -136,5 +136,10 @@
       }
     }
   },
-  "defaultProject": "billy-angular"
+  "defaultProject": "billy-angular",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
