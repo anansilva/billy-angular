@@ -3,19 +3,20 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'expenses-list',
   template: `
-  <div class="container list-container">
-    <div class="row">
-      <expense-thumbnail *ngFor="let expense of expenses" [expense]="expense"></expense-thumbnail>
+  <div class="container card-container">
+    <div class="row justify-content-center">
+      <div class="col">
+        <expense-thumbnail *ngFor="let expense of expenses" [expense]="expense"></expense-thumbnail>
       </div>
+    </div>
     </div>
   `,
   styles: [`
-    .list-container {
+    .card-container {
       padding: 10px;
       margin: 30px auto;
       width: 700px;
-      align-content: center;
-      background-color: transparent;
+      background-color: red;
     }
   `]
 })
