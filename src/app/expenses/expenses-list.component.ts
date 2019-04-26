@@ -14,7 +14,7 @@ import { Component } from '@angular/core';
   styles: [`
     .card-container {
       margin: 30px auto;
-      width: 700px;
+      max-width: 500px;
     }
     .card-col {
       padding-top: 15px;
