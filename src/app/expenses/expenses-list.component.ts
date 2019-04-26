@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   template: `
   <div class="container card-container">
     <div class="row justify-content-center">
-      <div class="col">
+      <div class="col card-col">
         <expense-thumbnail *ngFor="let expense of expenses" [expense]="expense"></expense-thumbnail>
       </div>
     </div>
@@ -13,10 +13,11 @@ import { Component } from '@angular/core';
   `,
   styles: [`
     .card-container {
-      padding: 10px;
       margin: 30px auto;
       width: 700px;
-      background-color: red;
+    }
+    .card-col {
+      padding-top: 15px;
     }
   `]
 })

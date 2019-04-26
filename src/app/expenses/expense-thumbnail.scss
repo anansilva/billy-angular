@@ -3,12 +3,12 @@
 }
 
 .expense-card {
-  width: 500px;
+  width: 100%;
   height: 100px;
-  margin: 20px;
   background-color: white;
   box-shadow: 0 2px 20px 0 rgba(0,0,0,0.05);
   border-radius: 4px;
+  margin-bottom: 15px;
   h2 {
     font-size: 28px;
   }
