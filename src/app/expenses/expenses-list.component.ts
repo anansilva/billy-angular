@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ExpenseService } from './shared/expense.service'
 
 @Component({
   selector: 'expenses-list',
@@ -21,37 +22,13 @@ import { Component } from '@angular/core';
     }
   `]
 })
-export class ExpensesListComponent {
-  expenses = [
-    {
-      id: 1,
-      amount: 10,
-      description: 'pingo doce',
-      category: 'food&groceries'
-    },
-    {
-      id: 2,
-      amount: 11,
-      description: 'bilhetes concerto',
-      category: 'entertainment'
-    },
-    {
-      id: 3,
-      amount: 500,
-      description: 'renda maio',
-      category: 'rent'
-    },
-    {
-      id: 4,
-      amount: 55,
-      description: 'eletricidade',
-      category: 'utilities'
-    },
-    {
-      id: 5,
-      amount: 10,
-      description: 'livros',
-      category: 'other'
-    },
-  ]
+export class ExpensesListComponent implements OnInit {
+  expenses:any[]
+
+  constructor(private expenseService: ExpenseService) {
+  }
+
+  ngOnInit() {
+    this.expenses = this.expenseService.getExpenses()
+  }
 }

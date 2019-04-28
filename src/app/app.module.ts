@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav/nav-bar.component';
 import { ExpensesListComponent } from './expenses/expenses-list.component';
 import { ExpenseThumbnailComponent } from './expenses/expense-thumbnail.component';
+import { ExpenseService } from './expenses/shared/expense.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { ExpenseThumbnailComponent } from './expenses/expense-thumbnail.componen
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ExpenseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
