@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ExpenseService } from './shared/expense.service'
+import { IExpense } from './shared/expense.model'
 
 @Component({
   selector: 'expenses-list',
@@ -23,7 +24,7 @@ import { ExpenseService } from './shared/expense.service'
   `]
 })
 export class ExpensesListComponent implements OnInit {
-  expenses:any[]
+  expenses:IExpense[]
 
   constructor(private expenseService: ExpenseService) {
   }

@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core'
+import { IExpense } from './expense.model'
 
 @Injectable()
 export class ExpenseService {
-  getExpenses() {
+  getExpenses():IExpense[] {
     return EXPENSES
   }
 }
 
-const EXPENSES = [
+const EXPENSES:IExpense[] = [
   {
     id: 1,
     amount: 10,

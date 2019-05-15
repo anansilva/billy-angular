@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input } from '@angular/core'
+import { IExpense } from './shared/expense.model'
 
 @Component({
   selector: 'expense-thumbnail',
@@ -6,5 +7,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./expense-thumbnail.scss']
 })
 export class ExpenseThumbnailComponent {
-  @Input() expense:any
+  @Input() expense:IExpense
 }
