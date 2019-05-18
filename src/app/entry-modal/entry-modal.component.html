@@ -1,14 +1,15 @@
 <div class="modal-header">
-  <h4 class="modal-title">Modal Title</h4>
+  <h4 class="modal-title">New entry</h4>
   <button type="button" class="close" aria-label="Close"
    (click)="activeModal.dismiss('Cross click')">
   </button>
 </div>
 <div class="modal-body">
   <p>My modal content</p>
+  <entry-form></entry-form>
 </div>
 <div class="modal-footer">
   <button (click)="activeModal.dismiss('Close clicked')">
-    Close Clicked
+    Close
   </button>
 </div>

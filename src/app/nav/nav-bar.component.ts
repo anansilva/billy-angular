@@ -16,6 +16,7 @@ export class NavBarComponent {
 
   openFormModal() {
     const modalRef = this.modalService.open(EntryModalComponent);
+    modalRef.componentInstance.id = 1;
     
     modalRef.result.then((result) => {
       console.log(result);
