@@ -9,6 +9,7 @@ import { NavBarComponent } from './nav/nav-bar.component';
 import { ExpensesListComponent } from './expenses/expenses-list.component';
 import { ExpenseThumbnailComponent } from './expenses/expense-thumbnail.component';
 import { ExpenseService } from './expenses/shared/expense.service';
+import { EntryModalComponent } from './entry-modal/entry-modal.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { ExpenseService } from './expenses/shared/expense.service';
     NavBarComponent,
     ExpensesListComponent,
     ExpenseThumbnailComponent,
+    EntryModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -23,6 +25,9 @@ import { ExpenseService } from './expenses/shared/expense.service';
     NgbModule
   ],
   providers: [ExpenseService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    EntryModalComponent
+  ]
 })
 export class AppModule { }

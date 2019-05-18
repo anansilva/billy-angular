@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { EntryModalComponent } from '../entry-modal/entry-modal.component';
 
 @Component({
   selector: 'nav-bar',
@@ -8,4 +10,17 @@ import { Component } from '@angular/core';
 
 export class NavBarComponent {
 
+  constructor(
+    private modalService: NgbModal
+  ) { }
+
+  openFormModal() {
+    const modalRef = this.modalService.open(EntryModalComponent);
+    
+    modalRef.result.then((result) => {
+      console.log(result);
+    }).catch((error) => {
+      console.log(error);
+    });
+  }
 }
