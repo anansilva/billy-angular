@@ -1,6 +1,7 @@
 import { Component, Output, EventEmitter, Input } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { ExpenseService } from '../expenses/shared/expense.service';
 
 @Component({
   selector: 'entry-form',
@@ -15,7 +16,8 @@ export class EntryFormComponent {
 
   constructor(
    public activeModal: NgbActiveModal,
-   private formBuilder: FormBuilder
+   private formBuilder: FormBuilder,
+   private expenseService: ExpenseService,
   ) {
     this.createForm();
   }
@@ -31,7 +33,8 @@ export class EntryFormComponent {
     return this.entryForm.controls.amount.valid || this.entryForm.controls.amount.untouched;
   }
   
-  private submitForm() {
+  private submitForm(formValues) {
+    this.expenseService.saveExpense(this.entryForm.value);
     this.activeModal.close(this.entryForm.value);
   }
 }

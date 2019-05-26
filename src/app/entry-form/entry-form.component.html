@@ -1,23 +1,26 @@
-<form [formGroup]="entryForm" (ngSubmit)="submitForm()">
+<form [formGroup]="entryForm" (ngSubmit)="submitForm(formValues)">
     <div class="modal-boy">
       <div class="container">
         <div class="form-group">
           <label for="category">category</label>
-          <input type="text" class="form-control">
+          <input (ngModel)="category" type="text" class="form-control"
+          formControlName="category" required>
         </div>
         <div class="form-group ">
           <label for="amount">amount</label>
-          <input type="number" class="form-control"
+          <input (ngModel)="amount" type="number" class="form-control" placeholder="€0,00"
           formControlName="amount" required>
           <div class="error" *ngIf="!validateAmount()" >This field is required.</div>
         </div>
         <div class="form-group">
           <label for="description">description</label>
-          <input type="text" class="form-control" required>
+          <input (ngModel)="description" type="text" class="form-control"
+          formControlName="description" required>
         </div>
         <div class="form-group">
           <label for="date">date</label>
-          <input type="date" class="form-control" required>
+          <input (ngModel)="date" type="date" class="form-control"
+          formControlName="date" required>
         </div>
       </div>
     </div>

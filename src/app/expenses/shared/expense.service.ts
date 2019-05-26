@@ -6,6 +6,11 @@ export class ExpenseService {
   getExpenses():IExpense[] {
     return EXPENSES
   }
+
+  saveExpense(expense) {
+    expense.id = 999
+    EXPENSES.push(expense)
+  }
 }
 
 const EXPENSES:IExpense[] = [
