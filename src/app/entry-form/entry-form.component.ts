@@ -33,7 +33,7 @@ export class EntryFormComponent {
     return this.entryForm.controls.amount.valid || this.entryForm.controls.amount.untouched;
   }
   
-  private submitForm(formValues) {
+  public submitForm() {
     this.expenseService.saveExpense(this.entryForm.value);
     this.activeModal.close(this.entryForm.value);
   }
